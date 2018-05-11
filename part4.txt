@@ -1,0 +1,18 @@
+
+********************************
+Name:Rucha Dubbewar
+A20373886
+********************************
+===============================
+Part 4
+==============================
+In case of "i was driving to chicago", S [ NP [ FPRON [ i ]  ] VP [ VBAR [ FAUX [ was ] FV [ driving ]  ] VBAR-MODS [ PP [ FP [ to ] NP [ FNAME [ chicago ]  ]  ]  is the parse tree with highest probability of 1.9 (log probability)
+
+System improvements:
+
+System can be further improved by:
+
+Predictive Parsing is characterized by its ability to use at most next (k) tokens to select which production to apply, referred to as lookahead.Making the right decision without backtracking.
+
+Dependency Parsing
+The fundamental notion of dependency is based on the idea that the syntactic structure of a sentence consists of binary asymmetrical relations between the words of the sentence and Dependency parsing provide a syntactic representation that encodes functional relationships between words.

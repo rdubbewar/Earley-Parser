@@ -1,0 +1,33 @@
+
+********************************
+Name:Rucha Dubbewar
+A20373886
+********************************
+==============================================================
+	grammar improvement part2 
+==============================================================
+
+changes to grammar that could parse sentences with conjunctions:
+
+0	s 	s and s
+0	np 	np and np
+0	np 	fname and fname
+
+The sentences that may parse could be:
+
+(1) john and ten will drive to chicago
+
+(2) john will drive to chicago and bunzaroo
+
+nvalid sentences that are now parsed:
+(1) i steal chicago
+
+(2) i is give
+
+(3) watermelon will give in chicago
+
+(4) ten live to watermelon
+
+
+
+

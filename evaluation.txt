@@ -1,0 +1,44 @@
+
+********************************
+Name:Rucha Dubbewar
+A20373886
+********************************
+=====================================
+	    evaluation.txt Part 1
+=====================================
+
+(1) Evaluating the parser in its current form:
+
+What sorts of sentences can it parse?
+
+(i) john will give it
+
+(ii) alien does live on planet
+
+(iii) i will drive to chicago in jetcar
+
+(iv) banzai is driving 
+
+(v) aliens steal watermelon from earth
+
+What types of sentences will it fail to parse?
+
+(i) Chicago is on earth
+ 
+(ii) they did it
+
+(iii) whorfin in buckaroo banzai
+
+(iv) steal in ten
+
+(v) watermelon is from chicago
+
+What improvements to the grammar or parser are required to properly parse common failed sentences?
+
+Answer: Adding more rules with sentence level construction can help in parsing common failed sentences.
+Other methods could be using predeterminers and postdeterminers, Also, using subcategorization on vp.
+
+
+
+ 
+

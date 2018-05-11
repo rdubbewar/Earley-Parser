@@ -1,0 +1,142 @@
+
+********************************
+Name:Rucha Dubbewar
+A20373886
+********************************
+================================================
+Code improvement for part 3
+================================================
+
+Show the tree(s) by printing the input sentence in a bracketed form:
+
+(1) i was driving to chicago
+
+Parse tree: S [ NP [ FPRON [ i ]  ] VP [ VBAR [ FAUX [ was ] FV [ driving ]  ] VBAR-MODS [ PP [ FP [ to ] NP [ FNAME [ chicago ]  ]  ]  ]  ]  ]
+
+Other examples that system parses:
+
+(2) john will give it
+
+S [ NP [ FNAME [ john ]  ] VP [ VBAR [ VBAR [ FAUX [ will ] FV [ give ]  ] NP [ FPRON [ it ]  ]  ]  ]  ]
+
+(3) alien does live on planet
+
+S [ NP [ NBAR [ FN [ alien ]  ]  ] VP [ VBAR [ FAUX [ does ] FV [ live ]  ] VBAR-MODS [ PP [ FP [ on ] NP [ FNAME [ planet ]  ]  ]  ]  ]  ]
+
+(4) i will drive to chicago in jetcar
+
+S [ NP [ FPRON [ i ]  ] VP [ VBAR [ FAUX [ will ] FV [ drive ]  ] VBAR-MODS [ PP [ FP [ to ] NP [ FNAME [ chicago ]  ]  ] VBAR-MODS [ PP [ FP [ in ] NP [ NBAR [ FN [ jetcar ]  ]  ]  ]  ]  ]  ]  ] 
+
+(5) banzai is driving 
+
+S [ NP [ FNAME [ banzai ]  ] VP [ VBAR [ FAUX [ is ] FV [ driving ]  ]  ]  ]
+
+(6) aliens steal watermelon from earth
+
+S [ NP [ NBAR [ FN [ aliens ]  ]  ] VP [ VBAR [ VBAR [ FV [ steal ]  ] NP [ NBAR [ FN [ watermelon ] NBAR-MODS [ PP [ FP [ from ] NP [ FNAME [ earth ]  ]  ]  ]  ]  ]  ] VBAR-MODS [ PP [ FP [ from ] NP [ FNAME [ earth ]  ]  ]  ]  ]  ]
+
+=============================================================
+code modification
+=============================================================
+
+grammar.java
+
+Grammar.addNonTerminal
+Add NonTerminal if they are not present
+@param s
+@param return nothing but terminal is added to s
+
+Grammar.isNonTerminal
+Checking a non terminal
+@param s
+@return true or false
+
+Grammar.predict
+Prediction function
+@param v
+@param p
+@param pos
+
+Grammar.scan
+This scans the production p with vector v
+@param v
+@param p
+@param s
+@return true or false
+
+Grammar.attach
+Attached the word in production
+@param cols
+@param cur
+@param p
+@param back
+
+Grammar.parse
+This parses the production 
+@param sent
+@return
+
+Grammar.printTable
+this prints the table in a human-readable fashion.
+format is one column at a time, lists the word in the sentence
+and then the productions for that column.
+@param cols The columns of the table
+@param sent the sentence
+
+Grammar.addProd
+Adding Vector in Production
+@param v
+@param p
+
+Grammar.inGrammar
+If string s is present in inGrammar
+@param s
+@return
+
+Grammar.getProds
+Get the production from the given parameter left
+@param left
+@return
+
+Grammar.canParse
+Function checks if a string can parse a sentence
+@param sent
+@return
+
+Grammar.toString
+Function to convert a word from production to string
+
+Production.java
+
+Production.spawn
+This creates a child of the production given its index.
+This adds the child to the production and sets the parent for
+the newly created child production.
+@param n the index on the right hand side where the child attaches
+@return The newly created child
+
+Production.spawn
+This creates a child of the production given its index.
+This adds the child to the production and sets the parent for
+the newly created child production.  The new child production
+will be a copy of the production input as a parameter.
+@param n the index on the right hand side where the child attaches
+@param prod the production to copy the child from
+@return The newly created child
+
+Production.equal
+This returns true if the given production matches this one.
+The comparison checks for identical productions only, down to the
+placement of the dot.
+@param p The production to compare to.
+
+=======================================================
+Improvements that can be done
+==========================================================
+
+System can be further improved by:
+
+Predictive Parsing is characterized by its ability to use at most next (k) tokens to select which production to apply, referred to as lookahead.Making the right decision without backtracking.
+
+Dependency Parsing
+The fundamental notion of dependency is based on the idea that the syntactic structure of a sentence consists of binary asymmetrical relations between the words of the sentence and Dependency parsing provide a syntactic representation that encodes functional relationships between words.

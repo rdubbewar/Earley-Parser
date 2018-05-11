@@ -1,4 +1,4 @@
-ou are to experiment with and enhance a simple Earley's Algorithm Parser using a small grammar ("simple.gr"), supplied in the attached ZIP file. Such a parser and grammars are supplied (written in Java); if you prefer, you may write your own parser (make sure to document your code). Also provided is a sample of sentences parsed. Please see the documentation files for details on code structure and running the parser.
+You are to experiment with and enhance a simple Earley's Algorithm Parser using a small grammar ("simple.gr"), supplied in the attached ZIP file. Such a parser and grammars are supplied (written in Java); if you prefer, you may write your own parser (make sure to document your code). Also provided is a sample of sentences parsed. Please see the documentation files for details on code structure and running the parser.
 
 Evaluate the parser in its current form:
 What sorts of sentences can it parse?
